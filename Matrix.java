@@ -31,7 +31,8 @@ public class Matrix {
 			int start = getPositionInNodes(nodeNames, edges[i][0]);
 			int end = getPositionInNodes(nodeNames, edges[i][1]);
 			if (start == -1 || end == -1) {
-				this.adjacencyMatrix = new int[nodeNames.length][nodeNames.length];
+				//this.adjacencyMatrix = new int[nodeNames.length][nodeNames.length];
+				// 边与顶点不匹配,注: 这里要做容错处理，需要清除当前申请的存储空间
 				System.out.println("边与顶点不匹配!邻接矩阵已清空");
 				break;
 			}
